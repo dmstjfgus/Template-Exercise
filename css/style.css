@@ -160,6 +160,7 @@ section {
   column-gap: 0.5rem;
   font-weight: 700;
   letter-spacing: -1px;
+  padding: 1.25em 0;
 }
 
 .header .nav-logo .nav-logo-icon {
@@ -213,6 +214,10 @@ section {
   font-size: var(--h2-font-size);
 }
 
+.header .nav-menu .nav-icon.menu-icon {
+  display: none;
+}
+
 /*========= 2.Home Style =========*/
 .home {
   padding: 13rem 0 5rem;
@@ -237,7 +242,7 @@ section {
 }
 
 .home .home-contents .home-title {
-  font-size: 3.5rem;
+  font-size: var(--big-font-size);
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
   line-height: 4.5rem;
@@ -380,26 +385,231 @@ section {
   _font-weight: var(--font-medium);
 }
 
-/* .products .container {
-  width: 100%;
-  background-color: var(--first-color);
-  border-radius: 8px;
+/*========= 4.Products Style =========*/
+.products .products-desc {
+  text-align: center;
+  margin: 1rem;
+  margin-bottom: 2rem;
 }
 
-.products .products-title {
-  font-size: var(--h1-font-size);
+.products .img-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 2rem;
+}
+.products .img-box {
+  width: 30%;
+  _padding: 2rem;
+}
+
+.products .img-box img {
+  transform: translateX(30px);
+}
+
+.products .color {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.products .color img {
+  width: 60%;
+}
+
+.products .color-circle {
+  width: 120px;
+  height: 120px;
+  background-color: var(--first-color-light);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  transform: translateX(-10px);
+}
+
+.products .products-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.products .products-txt .txt {
+  font-style: normal;
   font-weight: var(--font-semi-bold);
+  font-size: var(--small-font-size);
 }
 
-.products .products-title h3 {
+.products .img-box i {
+  background: var(--first-color);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
   color: #fff;
+  display: block;
 }
-
-.products .container .products-items {
-  width: 33.3%;
-} */
 
 /*========= Media Query Style =========*/
+/*==============@ 1024px @==============*/
+@media screen and (max-width: 1024px) {
+  /*========= Common Style =========*/
+  .container {
+    padding: 0 1rem;
+  }
+
+  /*========= Home Style =========*/
+  .home {
+    padding: 10rem 0 3rem;
+  }
+  .home .home-contents .home-title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  /*========= Step Style =========*/
+  .step .step-box {
+    padding: 1.5rem;
+  }
+}
+/*==============@ 768px @==============*/
+@media screen and (max-width: 768px) {
+  /*========= Common Style =========*/
+  .home {
+    padding: 8rem 0 3rem;
+  }
+  .botton {
+    font-size: var(--small-font-size);
+    margin: 2rem auto 0;
+  }
+  section {
+    padding: 4em 0 1rem;
+  }
+
+  /*========= Header Style =========*/
+  .header .nav-menu .nav-list {
+    display: none;
+  }
+  .header .nav-menu .nav-btns {
+    column-gap: 1.2rem;
+  }
+  .header .nav-menu .nav-icon.menu-icon {
+    display: flex;
+  }
+
+  /*========= Home Style =========*/
+  .home .home-contents {
+    flex-wrap: wrap;
+  }
+  .main .home .home-contents > div.home-box {
+    width: 100%;
+  }
+  .home .home-contents .home-txt {
+    order: 2;
+  }
+  .home .home-contents .home-title {
+    font-size: var(--big-font-size);
+    line-height: 3rem;
+    text-align: center;
+  }
+  .home .home-contents .home-desc {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  .main .home .home-contents > div.home-image {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  .main .home .home-contents > div.home-image > img {
+    width: 280px;
+  }
+
+  /*========= About Style =========*/
+  .about .about-contents {
+    flex-wrap: wrap;
+  }
+  .about .about-contents .about-box {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: var(--big-font-size);
+    line-height: 3rem;
+    text-align: center;
+    margin: 2rem 0 2rem;
+  }
+  .about .about-txt .about-desc {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  .about .about-txt .about-details {
+    width: 60%;
+    margin: 2rem auto 2rem;
+  }
+  .about .about-txt .about-btn {
+    margin: 2rem auto 0;
+    justify-content: center;
+  }
+
+  /*========= Step Style =========*/
+  .step .step-boxes {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .step .step-box {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+/*==============@ 480px @==============*/
+@media screen and (max-width: 480px) {
+  /*========= Step Style =========*/
+  .step .step-boxes {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .step .step-box {
+    width: 100%;
+  }
+}
+
+/*==============@ 420px @==============*/
+@media screen and (max-width: 420px) {
+  /*========= Home Style =========*/
+  .home {
+    padding: 8rem 0 3rem;
+  }
+
+  .home .home-contents .home-title {
+    font-size: var(--h1-font-size);
+    line-height: 2rem;
+    text-align: center;
+  }
+  .home .home-contents .home-desc {
+    width: 70%;
+    font-size: var(--small-font-size);
+  }
+
+  .main .home .home-contents > div.home-image > img {
+    width: 240px;
+  }
+
+  /*========= About Style =========*/
+  .section-title {
+    font-size: var(--h1-font-size);
+    line-height: 2rem;
+    text-align: center;
+  }
+  .about .about-txt .about-desc {
+    width: 70%;
+    font-size: var(--small-font-size);
+  }
+  .about .about-txt .about-details {
+    font-size: var(--small-font-size);
+  }
+}
 
 /*========= Memo =========*/
 /* 1. 박스, 텍스트 그림자 효과 */
