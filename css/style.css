@@ -115,7 +115,7 @@ section {
   max-width: 1024px;
 }
 
-.botton {
+.button {
   color: #fff;
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
@@ -152,7 +152,8 @@ section {
   justify-content: space-between;
 }
 
-.header .nav-logo {
+.header .nav-logo,
+.footer .nav-logo {
   color: var(--title-color);
   font-size: 1.15rem;
   display: flex;
@@ -163,7 +164,8 @@ section {
   padding: 1.25em 0;
 }
 
-.header .nav-logo .nav-logo-icon {
+.header .nav-logo .nav-logo-icon,
+.footer .nav-logo .nav-logo-icon {
   color: var(--first-color);
 }
 
@@ -397,6 +399,7 @@ section {
   flex-wrap: wrap;
   row-gap: 1rem;
   column-gap: 2rem;
+  margin-bottom: 2.5rem;
 }
 .products .img-box {
   width: 30%;
@@ -404,7 +407,13 @@ section {
 }
 
 .products .img-box img {
+  width: 60%;
   transform: translateX(30px);
+  transition: all 0.3s ease;
+}
+
+.products .img-box:hover img {
+  transform: translate(30px, -30px);
 }
 
 .products .color {
@@ -418,9 +427,9 @@ section {
 }
 
 .products .color-circle {
-  width: 120px;
-  height: 120px;
-  background-color: var(--first-color-light);
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--first-color-lighten);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -448,167 +457,167 @@ section {
   display: block;
 }
 
-/*========= Media Query Style =========*/
-/*==============@ 1024px @==============*/
-@media screen and (max-width: 1024px) {
-  /*========= Common Style =========*/
-  .container {
-    padding: 0 1rem;
-  }
+/*========= 5.Question Style =========*/
 
-  /*========= Home Style =========*/
-  .home {
-    padding: 10rem 0 3rem;
-  }
-  .home .home-contents .home-title {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-  }
-
-  /*========= Step Style =========*/
-  .step .step-box {
-    padding: 1.5rem;
-  }
-}
-/*==============@ 768px @==============*/
-@media screen and (max-width: 768px) {
-  /*========= Common Style =========*/
-  .home {
-    padding: 8rem 0 3rem;
-  }
-  .botton {
-    font-size: var(--small-font-size);
-    margin: 2rem auto 0;
-  }
-  section {
-    padding: 4em 0 1rem;
-  }
-
-  /*========= Header Style =========*/
-  .header .nav-menu .nav-list {
-    display: none;
-  }
-  .header .nav-menu .nav-btns {
-    column-gap: 1.2rem;
-  }
-  .header .nav-menu .nav-icon.menu-icon {
-    display: flex;
-  }
-
-  /*========= Home Style =========*/
-  .home .home-contents {
-    flex-wrap: wrap;
-  }
-  .main .home .home-contents > div.home-box {
-    width: 100%;
-  }
-  .home .home-contents .home-txt {
-    order: 2;
-  }
-  .home .home-contents .home-title {
-    font-size: var(--big-font-size);
-    line-height: 3rem;
-    text-align: center;
-  }
-  .home .home-contents .home-desc {
-    width: 60%;
-    text-align: center;
-    margin: auto;
-  }
-  .main .home .home-contents > div.home-image {
-    order: 1;
-    margin-bottom: 2rem;
-  }
-  .main .home .home-contents > div.home-image > img {
-    width: 280px;
-  }
-
-  /*========= About Style =========*/
-  .about .about-contents {
-    flex-wrap: wrap;
-  }
-  .about .about-contents .about-box {
-    width: 100%;
-  }
-
-  .section-title {
-    font-size: var(--big-font-size);
-    line-height: 3rem;
-    text-align: center;
-    margin: 2rem 0 2rem;
-  }
-  .about .about-txt .about-desc {
-    width: 60%;
-    text-align: center;
-    margin: auto;
-  }
-  .about .about-txt .about-details {
-    width: 60%;
-    margin: 2rem auto 2rem;
-  }
-  .about .about-txt .about-btn {
-    margin: 2rem auto 0;
-    justify-content: center;
-  }
-
-  /*========= Step Style =========*/
-  .step .step-boxes {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-
-  .step .step-box {
-    width: calc(50% - 0.5rem);
-  }
+.question {
+  background: var(--first-color-lighten);
 }
 
-/*==============@ 480px @==============*/
-@media screen and (max-width: 480px) {
-  /*========= Step Style =========*/
-  .step .step-boxes {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-
-  .step .step-box {
-    width: 100%;
-  }
+.question .question-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1rem;
+  margin: 2.5rem 0;
+  align-items: flex-start;
 }
 
-/*==============@ 420px @==============*/
-@media screen and (max-width: 420px) {
-  /*========= Home Style =========*/
-  .home {
-    padding: 8rem 0 3rem;
-  }
+.question .question-box {
+  background: #fff;
+  width: calc(50% - 0.5rem);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
 
-  .home .home-contents .home-title {
-    font-size: var(--h1-font-size);
-    line-height: 2rem;
-    text-align: center;
-  }
-  .home .home-contents .home-desc {
-    width: 70%;
-    font-size: var(--small-font-size);
-  }
+.question .question-box:hover {
+  box-shadow: 0 2px 8px #cfcfcf;
+}
 
-  .main .home .home-contents > div.home-image > img {
-    width: 240px;
-  }
+.question .question-header {
+  display: flex;
+  padding: 1rem;
+}
 
-  /*========= About Style =========*/
-  .section-title {
-    font-size: var(--h1-font-size);
-    line-height: 2rem;
-    text-align: center;
-  }
-  .about .about-txt .about-desc {
-    width: 70%;
-    font-size: var(--small-font-size);
-  }
-  .about .about-txt .about-details {
-    font-size: var(--small-font-size);
-  }
+.question .question-header i {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.question .question-header h3 {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+
+.question .question-answer {
+  width: 100%;
+  padding: 1rem;
+  font-size: var(--small-font-size);
+  display: none;
+}
+
+.question .question-box.active {
+  background: var(--first-color);
+}
+
+.question .question-box.active .question-header i,
+.question .question-box.active .question-header h3,
+.question .question-box.active .question-answer {
+  color: #fff;
+}
+
+/*========= 6. Contact Style =========*/
+.contact .contact-contents {
+  display: flex;
+}
+.contact .company-info {
+  width: 45%;
+}
+.contact .input-info {
+  width: 55%;
+  padding: 0 0 0 3rem;
+}
+
+.contact div.txt h3 {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+.contact div.txt span {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.contact .contact-tel {
+  margin: 2rem 0;
+}
+
+.contact .form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.contact .form p {
+  width: 100%;
+}
+
+.contact .form p input,
+.contact .form p textarea {
+  width: 100%;
+  padding: 0 0 1rem 0;
+  border: none;
+  border-bottom: 1px solid var(--text-color-light);
+  color: var(--text-color);
+  resize: none;
+  outline: 0;
+}
+
+.contact .form p textarea {
+  height: 10rem;
+}
+
+/*========= 7. Footer Style =========*/
+.footer .footer-contents {
+  display: flex;
+}
+
+.footer .footer-item {
+  +border: 1px solid;
+  width: 25%;
+}
+
+.footer .footer-item:nth-child(1) {
+  width: 30%;
+}
+
+.footer .nav-logo {
+  padding: 0;
+}
+
+.footer .footer-title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.footer .footer-item:nth-child(1) .footer-title {
+  margin: 2rem 0 1.5rem;
+}
+.footer .footer-item:not(:first-child) {
+  padding: 2rem;
+}
+.footer .btn-box {
+  display: flex;
+  padding: 0.8rem 1rem;
+  background: var(--first-color-lighten);
+  align-items: center;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+}
+.footer .btn-box em {
+  font-size: var(--small-font-size);
+  font-style: normal;
+  color: var(--text-color);
+}
+.footer .btn-box .button {
+  margin: 0;
+  font-size: var(--small-font-size);
+  padding: 0.8rem;
 }
 
 /*========= Memo =========*/

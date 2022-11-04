@@ -1,0 +1,211 @@
+/*========= Media Query Style =========*/
+/*==============@ 1024px @==============*/
+@media screen and (max-width: 1024px) {
+  /*========= Common Style =========*/
+  .container {
+    padding: 0 1rem;
+  }
+
+  /*========= Home Style =========*/
+  .home {
+    padding: 10rem 0 3rem;
+  }
+  .home .home-contents .home-title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  /*========= Step Style =========*/
+  .step .step-box {
+    padding: 1.5rem;
+  }
+}
+/*==============@ 768px @==============*/
+@media screen and (max-width: 768px) {
+  /*========= Common Style =========*/
+  .home {
+    padding: 8rem 0 3rem;
+  }
+  .botton {
+    font-size: var(--small-font-size);
+    margin: 2rem auto 0;
+  }
+  section {
+    padding: 4em 0 1rem;
+  }
+
+  /*========= Header Style =========*/
+  .header .nav-menu .nav-list {
+    display: none;
+  }
+  .header .nav-menu .nav-btns {
+    column-gap: 1.2rem;
+  }
+  .header .nav-menu .nav-icon.menu-icon {
+    display: flex;
+  }
+
+  /*========= Home Style =========*/
+  .home .home-contents {
+    flex-wrap: wrap;
+  }
+  .main .home .home-contents > div.home-box {
+    width: 100%;
+  }
+  .home .home-contents .home-txt {
+    order: 2;
+  }
+  .home .home-contents .home-title {
+    font-size: var(--big-font-size);
+    line-height: 3rem;
+    text-align: center;
+  }
+  .home .home-contents .home-desc {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  .main .home .home-contents > div.home-image {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  .main .home .home-contents > div.home-image > img {
+    width: 280px;
+  }
+
+  /*========= About Style =========*/
+  .about .about-contents {
+    flex-wrap: wrap;
+  }
+  .about .about-contents .about-box {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: var(--big-font-size);
+    line-height: 3rem;
+    text-align: center;
+    margin: 2rem 0 2rem;
+  }
+  .about .about-txt .about-desc {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  .about .about-txt .about-details {
+    width: 60%;
+    margin: 2rem auto 2rem;
+  }
+  .about .about-txt .about-btn {
+    margin: 2rem auto 0;
+    justify-content: center;
+  }
+
+  /*========= Step Style =========*/
+  .step .step-boxes {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .step .step-box {
+    width: calc(50% - 0.5rem);
+  }
+
+  /*========= Products Style =========*/
+  .products .img-boxes {
+    column-gap: 0;
+  }
+  .products .img-box {
+    width: 50%;
+  }
+  .products .color img {
+    transform: translateX(0);
+  }
+
+  /*========= Question Style =========*/
+  .question .question-box {
+    width: 100%;
+  }
+
+  .question .question-header {
+    padding: 0.7rem 1rem;
+  }
+
+  /*========= Contact Style =========*/
+  .contact .contact-contents {
+    flex-wrap: wrap;
+  }
+  .contact .contact-contents > div {
+    width: 100%;
+  }
+
+  .contact .section-title {
+    text-align: left;
+  }
+
+  .contact .input-info {
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .contact .form {
+    padding: 1rem 0;
+  }
+}
+
+/*==============@ 480px @==============*/
+@media screen and (max-width: 480px) {
+  /*========= Step Style =========*/
+  .step .step-boxes {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .step .step-box {
+    width: 100%;
+  }
+}
+
+/*==============@ 420px @==============*/
+@media screen and (max-width: 420px) {
+  /*========= Home Style =========*/
+  .home {
+    padding: 8rem 0 3rem;
+  }
+
+  .home .home-contents .home-title {
+    font-size: var(--h1-font-size);
+    line-height: 2rem;
+    text-align: center;
+  }
+  .home .home-contents .home-desc {
+    width: 70%;
+    font-size: var(--small-font-size);
+  }
+
+  .main .home .home-contents > div.home-image > img {
+    width: 240px;
+  }
+
+  /*========= About Style =========*/
+  .section-title {
+    font-size: var(--h1-font-size);
+    line-height: 2rem;
+    text-align: center;
+  }
+  .about .about-txt .about-desc {
+    width: 70%;
+    font-size: var(--small-font-size);
+  }
+  .about .about-txt .about-details {
+    font-size: var(--small-font-size);
+  }
+
+  /*========= Products Style =========*/
+  .products .products-txt {
+    padding: 0 0.5rem;
+  }
+  .products .products-txt .txt {
+    font-size: var(--smaller-font-size);
+  }
+}
