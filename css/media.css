@@ -30,6 +30,7 @@
     font-size: var(--small-font-size);
     margin: 2rem auto 0;
   }
+  footer,
   section {
     padding: 4em 0 1rem;
   }
@@ -151,6 +152,23 @@
   .contact .form {
     padding: 1rem 0;
   }
+
+  /*========= Footer Style =========*/
+  .footer .footer-contents {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+  .footer .footer-item {
+    width: 50% !important;
+    /* !important: css에서  정의하는 값으로 가장 최우선 적용된다. 사용은 최소화한다 */
+  }
+  .footer .footer-item:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .footer .copy {
+    padding: 4rem 0 2rem;
+  }
 }
 
 /*==============@ 480px @==============*/
@@ -163,6 +181,20 @@
 
   .step .step-box {
     width: 100%;
+  }
+
+  /*========= Footer Style =========*/
+  .footer .footer-contents {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+  .footer .footer-item {
+    width: 100% !important;
+    /* !important: css에서  정의하는 값으로 가장 최우선 적용된다. 사용은 최소화한다 */
+  }
+
+  .footer .footer-item:not(:first-child) {
+    padding-left: 0;
   }
 }
 
@@ -207,5 +239,9 @@
   }
   .products .products-txt .txt {
     font-size: var(--smaller-font-size);
+  }
+
+  .footer .footer-item:not(:first-child) {
+    padding: 0rem;
   }
 }

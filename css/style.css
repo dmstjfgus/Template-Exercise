@@ -104,7 +104,8 @@ img {
   _overflow: hidden;
 }
 
-section {
+section,
+footer {
   padding: 8em 0 1rem;
 }
 
@@ -554,17 +555,35 @@ section {
 
 .contact .form p {
   width: 100%;
+  position: relative;
 }
 
+.contact .form p label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  transition: all 0.3s;
+}
 .contact .form p input,
 .contact .form p textarea {
   width: 100%;
-  padding: 0 0 1rem 0;
+  padding: 1rem 1rem 1rem 0;
   border: none;
   border-bottom: 1px solid var(--text-color-light);
   color: var(--text-color);
   resize: none;
   outline: 0;
+}
+
+.contact .form p .input:focus + label {
+  top: -0.5rem;
+}
+
+/* placeholder-shown : placeholder가 보는 것을 체크한다. 
+만약 사용자가 값을 입력하면 placeholder가 보이지 않는다 */
+
+.contact .form p input:not(:placeholder-shown).input:not(:focus) + label {
+  top: -0.5rem;
 }
 
 .contact .form p textarea {
@@ -577,7 +596,7 @@ section {
 }
 
 .footer .footer-item {
-  +border: 1px solid;
+  _border: 1px solid;
   width: 25%;
 }
 
@@ -618,6 +637,43 @@ section {
   margin: 0;
   font-size: var(--small-font-size);
   padding: 0.8rem;
+}
+
+.footer .footer-item p {
+  font-size: var(--small-font-size);
+  margin-top: 0.75rem;
+}
+
+.footer .footer-item .footer-social-box {
+  margin-top: 0.75rem;
+  display: flex;
+  column-gap: 0.75rem;
+}
+
+.footer .footer-item .footer-social-box a {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-left: 0.2rem;
+}
+
+.footer .footer-item .footer-card-box {
+  display: flex;
+  column-gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.footer .footer-item .footer-card-box img {
+  width: 35px;
+}
+
+.footer .copy {
+  padding: 7rem 0 2rem;
+  text-align: center;
+}
+
+.footer .copy p {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
 }
 
 /*========= Memo =========*/
