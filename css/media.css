@@ -52,6 +52,7 @@
   }
   .main .home .home-contents > div.home-box {
     width: 100%;
+    align-items: center;
   }
   .home .home-contents .home-txt {
     order: 2;
