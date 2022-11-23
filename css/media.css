@@ -36,9 +36,53 @@
   }
 
   /*========= Header Style =========*/
-  .header .nav-menu .nav-list {
-    display: none;
+  .header {
+    position: relative;
   }
+  .header .nav-menu .nav-list {
+    _display: none;
+    position: absolute;
+    background: var(--first-color);
+    border-radius: 0 0 0 1rem;
+    right: -0%;
+    top: 100%;
+    display: block;
+    width: 20%;
+    padding: 2rem 0;
+    height: 100vh;
+  }
+  .header .nav-menu .nav-list .nav-link {
+    color: #fff;
+  }
+  .header .nav-menu .nav-list .nav-item.active > .nav-link {
+    color: #fff;
+  }
+  .header .nav-menu .nav-list .nav-item.active .nav-link::before {
+    _height: 0;
+    background-color: #fff;
+    _bottom: 0.25rem;
+    left: unset;
+    right: 2rem;
+    width: 0;
+  }
+  @keyframes ani-wid {
+    from {
+      width: 0;
+    }
+    to {
+      width: 30%;
+    }
+  }
+
+  .header .nav-menu li {
+    text-align: right;
+    padding: 0 0.75rem;
+    _border-bottom: 1px solid var(--first-color);
+  }
+  .header .nav-menu li:not(:last-child) {
+    border-bottom: 0;
+  }
+
   .header .nav-menu .nav-btns {
     column-gap: 1.2rem;
   }
